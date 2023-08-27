@@ -1,6 +1,9 @@
-/**
+const initializeFabricHistory = (fabric) => {
+  /**
  * Override the initialize function for the _historyInit();
  */
+
+  
 fabric.Canvas.prototype.initialize = (function (originalFn) {
   return function (...args) {
     originalFn.call(this, ...args);
@@ -162,3 +165,5 @@ fabric.Canvas.prototype.canRedo = function () {
 fabric.Canvas.prototype.offHistory = function () {
   this.historyProcessing = true;
 };
+
+}
