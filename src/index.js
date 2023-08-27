@@ -1,4 +1,4 @@
-const initializeFabricHistory = (fabric) => {
+function initializeFabricHistory (fabric) {
   /**
  * Override the initialize function for the _historyInit();
  */
@@ -165,5 +165,9 @@ fabric.Canvas.prototype.canRedo = function () {
 fabric.Canvas.prototype.offHistory = function () {
   this.historyProcessing = true;
 };
-
+  return fabric;
 }
+
+module.exports = {
+  initializeFabricHistory
+};
